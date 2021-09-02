@@ -15,6 +15,11 @@ try{
 
 }
 
-$sql = ("INSERT INTO all_products VALUES ('AA100', 'Aba Ata', 135.00, 12.5, 20) ");
+$sql = "INSERT INTO all_products VALUES ('AK50', 'Aba Kudu', 80.00, 12.5, 20) ";
+$conn->exec($sql);
+//echo "New record created successfully";
+
+
+$conn =null;
 
 ?>
