@@ -3,23 +3,22 @@ $server = "localhost";
 $username = "root";
 $password = "";
 
-//$link = new mysqli ( $server, $username, $password, "products");
+$conn = new mysqli ( $server, $username, $password, "products");
 
 try{
     $conn = new PDO("mysql:host=$server;dbname=products",$username, $password);
     //set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    echo "Connected Successfully";    
+    echo "RIbel Products <br>";    
 }catch(PODException $e){
-    echo "Connection failed:" . $e->getMessage();
+    echo "Database Connection failed:<br>" . $e->getMessage();
 
 }
-
-$sql = "INSERT INTO all_products VALUES ('AK50', 'Aba Kudu', 80.00, 12.5, 20) ";
+/*$sql = "INSERT INTO all_products VALUES ('SS50', 'Sesami Seed', 50.00, 16.5, 10) ";
 $conn->exec($sql);
-//echo "New record created successfully";
+echo "New record created successfully";
+*/
 
-
-$conn =null;
+//$conn =null;
 
 ?>
