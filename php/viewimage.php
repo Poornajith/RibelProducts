@@ -3,10 +3,10 @@
 include 'db.php';
 
 // Get images from the database
-$conn = $db->query("SELECT * FROM images ORDER BY uploaded_on DESC");
+$sql = $conn->query("SELECT * FROM images ORDER BY uploaded_on DESC");
 
-if($conn->num_rows > 0){
-    while($row = $conn->fetch_assoc()){
+if($sql->num_rows > 0){
+    while($row = $sql->fetch_assoc()){
         $imageURL = 'uploads/'.$row["file_name"];
 ?>
     <img src="<?php echo $imageURL; ?>" alt="" />
