@@ -28,6 +28,7 @@
     <title>Add Item</title>
 </head>
 <body>
+<?php include "./AdminNav.php" ?>
 <br>
 <form action="AddNewItem.php" method = "post">
     Item Code : <input type="text" name = "ItemCode"><br>
