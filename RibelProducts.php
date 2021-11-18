@@ -31,7 +31,7 @@ include 'ConnectDB.php';
 <?php
 for ($i=1;$i<10;$i++) {
             echo '<div class="card">
-                    <img class="card-img-top" src="HomePageImgut.png" alt="Card image cap">
+                    <img class="card-img-top" src="./HomePageImg/spices.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content</p>
@@ -64,7 +64,8 @@ for ($i=1;$i<10;$i++) {
                         <input list="Item Name" name="ItemName">
                         <datalist id="Item Name">
                             <?php
-                            $sql = "SELECT ItemName FROM itemnames";
+
+                            $sql ="SELECT * FROM itemnames";
                             $result = $db->query($sql);
                             while($row = $result->fetch_assoc()){
                                 echo '<option value="'.$row['ItemName']. '">'.$row['ItemName']. '</option>';

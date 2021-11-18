@@ -3,16 +3,6 @@
 include 'ConnectDB.php';
 $statusMsg = '';
 
-
-// Database configuration
-$dbHost     = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName     = "products";
-
-// Create database connection
-$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
 // File upload path
 $targetDir = "uploads/";
 $fileName = basename($_FILES["file"]["name"]);
@@ -46,4 +36,3 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 
 // Display status message
 echo $statusMsg;
-?>
